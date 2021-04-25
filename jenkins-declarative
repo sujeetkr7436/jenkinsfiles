@@ -6,6 +6,13 @@ pipeline{
 git branch: 'main', credentialsId: 'github', url: 'https://github.com/sujeetkr7436/shoppingcartmvc.git'
 }
         }
+        
+        stage{
+            steps("Maven Build"){
+                sh 'mvn clean package'
+            }
+        }
+        
     }
     
 }
