@@ -12,8 +12,8 @@ git branch: 'main', credentialsId: 'github', url: 'https://github.com/sujeetkr74
 }
         }
         
-        stage{
-            steps("Maven Build"){
+        stage("Maven Build"){
+            steps{
                 sh 'mvn clean package'
             }
         }
